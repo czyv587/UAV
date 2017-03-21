@@ -1,0 +1,15 @@
+--silicon_version=28 
+-g 
+--define="_DEBUG" --define="LARGE_MODEL" 
+--diag_warning=225 
+--large_memory_model 
+--float_support=fpu32 
+-z 
+-m"LED.map" 
+--stack_size=1000 
+--heap_size=1000 
+--warn_sections 
+-i"C:/Program Files (x86)/Texas Instruments/ccsv4/tools/compiler/c2000/lib" -i"C:/Program Files (x86)/Texas Instruments/ccsv4/tools/compiler/c2000/include" -i"C:/Users/Administrator/Desktop/LED" 
+--reread_libs 
+--rom_model 
+"./pwm.obj" "./hardware_I2C.obj" "./fast_math.obj" "./control.obj" "./capture.obj" "./MPU6050.obj" "./LED.obj" "./IMU.obj" "./I2C.obj" "./Data_Transfer.obj" "./DSP2833x_usDelay.obj" "./DSP2833x_Xintf.obj" "./DSP2833x_SysCtrl.obj" "./DSP2833x_Sci.obj" "./DSP2833x_PieVect.obj" "./DSP2833x_PieCtrl.obj" "./DSP2833x_I2C.obj" "./DSP2833x_GlobalVariableDefs.obj" "./DSP2833x_EPwm.obj" "./DSP2833x_ECap.obj" "./DSP2833x_DefaultIsr.obj" "./DSP2833x_CpuTimers.obj" "./DSP2833x_CodeStartBranch.obj" "./DSP2833x_ADC_cal.obj" -l"rts2800_fpu32.lib" "../CMD/28335_RAM_lnk.cmd" "../CMD/DSP2833x_Headers_nonBIOS.cmd" 
